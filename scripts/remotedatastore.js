@@ -9,25 +9,6 @@
     this.serverUrl = url;
   }
 
-  // function RemoteDataStore(url) {
-  //
-  //
-  //   // if (!url) {
-  //   //   throw new Error("No remote URL supplied.");
-  //   // }
-  //   this.serverUrl = url;
-  //   $.ajax(url, {
-  //     type: "GET",
-  //     success: function(orders) {
-  //       console.log(orders);
-  //       return orders;
-  //     },
-  //     error: function(xhr) {
-  //       alert(xhr.responseText);
-  //     }
-  //   });
-  // }
-
   // RemoteDataStore.prototype.add = function (key, val) {
   //   $.post(this.serverUrl, val, function (serverResponse) {
   //     console.log(serverResponse);
@@ -62,8 +43,7 @@
       success: function(serverResponse) {
         // Do something
         console.log(serverResponse);
-        //cb(serverResponse);
-        return serverResponse;
+        cb(serverResponse);
       },
       error: function(xhr) {
         alert(xhr.responseText);
